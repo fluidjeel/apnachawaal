@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Geist } from "next/font/google";
+import { ShopState } from "@/components/shop/ShopState";
 import "./globals.css";
 
 const serif = Fraunces({
@@ -31,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="skip-link font-sans text-sm" href="#content">
           Skip to the grain
         </a>
-        {children}
+        <ShopState>{children}</ShopState>
       </body>
     </html>
   );

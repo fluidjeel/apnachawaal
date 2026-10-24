@@ -3,6 +3,8 @@ import { BrandList } from "@/components/BrandList";
 import { DishSlides } from "@/components/DishSlides";
 import { GrainPour } from "@/components/GrainPour";
 import { HarvestStory } from "@/components/HarvestStory";
+import { ShopLinks } from "@/components/shop/ShopLinks";
+import { claims } from "@/lib/shop-catalog";
 import { catalog } from "@/lib/varieties";
 
 const latin = Outfit({ subsets: ["latin"], weight: ["300", "500"] });
@@ -77,19 +79,6 @@ const dishSlides: Record<string, { src: string; alt: string; label: string }[]> 
   ],
 };
 
-const claims: Record<string, string[]> = {
-  gobindobhog: ["Buttery sweet", "Payesh scent", "Soft cook"],
-  kalanamak: ["Low GI", "High protein", "Black husk", "Sweet aroma"],
-  "basmati-370": ["Stays long", "Aged aroma", "Fluffy grain"],
-  "seeraga-samba": ["High iron", "Biryani grain", "Stays separate"],
-  "palakkadan-matta": ["Red bran", "Firm bite", "Feast rice"],
-  navara: ["Ayurvedic", "Monsoon rice"],
-  ambemohar: ["Mango blossom", "Soft grain"],
-  "chak-hao-amubi": ["Low GI", "More filling", "Turns purple"],
-  rajamudi: ["High fiber", "Bran on", "Firm bite"],
-  "boka-chaul": ["High fiber", "No fire", "Soft rice"],
-};
-
 export default function ModernHome() {
   return (
     <div
@@ -101,6 +90,7 @@ export default function ModernHome() {
         <header className="relative z-10 flex items-center gap-4 px-[6vw] pt-8 text-[0.68rem] uppercase tracking-[0.22em] text-[#E2B657]">
           <p>ApnaChawal</p>
           <p className="border border-[#E2B657]/70 px-2 py-1 text-[0.62rem]">100% organic</p>
+          <ShopLinks />
         </header>
         <main className="relative z-10 mt-auto px-[6vw] pb-10 pt-24">
           <p className={`${indic.className} text-3xl text-[#E2B657] md:text-5xl`}>अपना चावल</p>
